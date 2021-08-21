@@ -1,13 +1,21 @@
 const axios = require('axios');
 
-exports.homeRouter = (req, res) =>{
+exports.homeRouter = (req, res) => {
     res.render('home/index');
 }
 
-exports.pricingRouter = (req, res) =>{
+exports.pricingRouter = (req, res) => {
     res.render('home/pricing');
 }
 
-exports.webRouter = (req, res) =>{
+exports.webRouter = (req, res) => {
     res.render('home/web-development');
+}
+
+exports.loginRouter = (req, res) => {
+    res.render('home/login');
+}
+
+exports.registerRoute = (req, res) => {
+    res.render('home/register');
 }

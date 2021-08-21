@@ -1,14 +1,16 @@
 const express = require('express');
-const { homeRouter, pricingRouter, webRouter } = require('../services/homeRender');
+const { homeRouter, pricingRouter, webRouter, loginRouter, registerRoute } = require('../services/homeRender');
 const router = express.Router();
-const homeController = require('../controller/homeController');
+const userRegisterController = require('../controller/userRegisterController');
 
 router.get('/', homeRouter);
 router.get('/pricing', pricingRouter);
 router.get('/web-development', webRouter);
+router.get('/login', loginRouter);
+router.get('/register', registerRoute);
 
 
 // API
-// router.get('/api', homeController.index);
+router.post('/api/register', userRegisterController.register);
 
 module.exports = router;
