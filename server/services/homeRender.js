@@ -19,3 +19,7 @@ exports.loginRouter = (req, res) => {
 exports.registerRoute = (req, res) => {
     res.render('home/register');
 }
+
+exports.changePassword = (req, res) => {
+    res.render('home/change-password');
+}
